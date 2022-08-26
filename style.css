@@ -1,0 +1,116 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+body {
+  font-size: 18px;
+  font-family: "Kumbh Sans", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+:root {
+  --d-cyan: hsl(185, 75%, 39%);
+  --vd-desat-blue: hsl(229, 23%, 23%);
+  --d-gray-blue: hsl(227, 10%, 46%);
+  --d-gray: hsl(0, 0%, 59%);
+  --d-gray-a: hsla(0, 0%, 59%, 20%);
+}
+
+/* ----------TYPOGRAPHY------ */
+.profile__name,
+.profile__numbers {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--vd-desat-blue);
+}
+.profile__age {
+  font-weight: 400;
+  color: var(--d-gray);
+  margin-left: 8px;
+}
+.profile__location {
+  font-size: 1rem;
+  color: var(--d-gray);
+}
+.profile__numbers {
+  margin-bottom: 6px;
+  margin-top: 20px;
+  text-transform: uppercase;
+}
+.profile__data {
+  font-size: 0.8rem;
+  color: var(--d-gray);
+  margin-top: 6px;
+  margin-bottom: 20px;
+}
+
+/* --------COMPONENTS----- */
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  min-height: 100vh;
+  background-color: var(--d-cyan);
+  padding: 20px;
+  position: relative;
+  overflow: hidden;
+}
+.card {
+  text-align: center;
+  border-radius: 12px;
+  overflow: hidden;
+  background-color: white;
+  position: relative;
+  z-index: 1;
+}
+.profile__img__container {
+  border-radius: 50%;
+  overflow: hidden;
+  width: 96px;
+  height: 96px;
+  margin: -48px auto 20px;
+  border: 5px solid white;
+  z-index: 10;
+  position: absolute;
+  left: calc(50% - 48px);
+}
+.profile__img {
+  max-width: 100%;
+}
+.profile__info {
+  margin-top: 60px;
+}
+
+.profile__stats {
+  display: flex;
+  justify-content: space-between;
+  border-top: 1px solid var(--d-gray-a);
+  margin-top: 30px;
+}
+.profile__stat {
+  width: 100%;
+}
+
+.top__bubble {
+  position: absolute;
+  top: -489px;
+  right: 50%;
+  z-index: 0;
+}
+.bottom__bubble {
+  position: absolute;
+  bottom: -489px;
+  left: 50%;
+  z-index: 0;
+}
+
+@media (min-width: 1200px) {
+  .top__bubble {
+    right: 55%;
+  }
+  .bottom__bubble {
+    left: 55%;
+  }
+}
